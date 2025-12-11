@@ -81,14 +81,30 @@
     overflow: hidden;
   }
   
-  body {
-    background-color: var(--color-bg-primary);
-    font-family: var(--ff-body);
-    font-size: var(--fs-md);
-    color: var(--color-text);
-    margin-top: var(--height-header);
-    line-height: 1.2;
-  }
+  /* -----------------------
+   Body / global background
+   ----------------------- */
+body {
+  /* prefer variable (set in :root) */
+  background-color: var(--color-bg-primary);
+  /* nice fallback gradient if variable not applied */
+  background-image: linear-gradient(180deg, rgba(12,18,32,1) 0%, rgba(15,23,32,1) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--color-text);
+  font-family: var(--ff-body);
+  font-size: var(--fs-md);
+  margin-top: var(--height-header);
+  line-height: 1.2;
+}
+
+/* if you still can't get it to update, uncomment this strong fallback (temporary) */
+/*
+body {
+  background: #0c1220 !important;
+}
+*/
+
   
   /* Reusable CSS
   --------------------------------------------------------------*/
@@ -722,6 +738,7 @@
       grid-template-columns: repeat(3, 1fr);
     }
   }
+
 
 
 
