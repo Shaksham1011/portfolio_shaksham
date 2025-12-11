@@ -1,46 +1,37 @@
-:root {
-    /* Colors
-    ____________________*/
-    --color-primary: #25ab75;
-    --color-primary-dark: #208c61;
-    --color-bg-primary: #1a1a1a;
-    --color-bg-secondary: #242424;
-    --color-bg-footer: #151515;
-    --color-white: #ffffff;
-    --color-text: #676767;
-    --color-border: #373737;
-  
-    /* Font & Typography
-    ___________________*/
-    --ff-body: "Space Grotesk", sans-serif;
-    /* font sizes */
-    --fs-sm: 1.4rem;
-    --fs-md: 1.6rem;
-    --fs-lg: 2rem;
-    --fs-xl: 2.4rem;
-    --fs-xxl: 3.2rem;
-    --fs-biggest: clamp(3rem, 8vw, 5rem);
-    /* font weight */
-    --fw-regular: 400;
-    --fw-medium: 500;
-    --fw-semibold: 600;
-    --fw-bold: 700;
-  
-    /* z-index
-    ___________________*/
-    --zindex-menu: 1000;
-    --zindex-fixed: 1010;
-  
-    /* With & Height 
-    ------------------*/
-    --width-container: 98rem;
-    --height-header: 10rem;
-    --height-header--scroll: 8rem;
-  
-    /* Transition and box shadow*/
-    --transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-    --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
+:root{
+  /* Colors */
+  --color-primary: #20c0a2;         /* teal accent */
+  --color-primary-dark: #18a886;
+  --color-bg-primary: #0f1720;      /* slightly lighter than pure black */
+  --color-bg-secondary: #141a20;    /* cards background */
+  --color-bg-footer: #0b0f13;
+  --color-white: #ffffff;
+  --color-text: #c9d6df;            /* much higher contrast text */
+  --color-subtext: #9fb0bb;         /* secondary text */
+  --color-border: #1f262b;
+
+  /* Fonts & typography (keep yours) */
+  --ff-body: "Space Grotesk", sans-serif;
+  --fs-sm: 1.4rem;
+  --fs-md: 1.6rem;
+  --fs-lg: 2rem;
+  --fs-xl: 2.4rem;
+  --fs-xxl: 3.2rem;
+  --fs-biggest: clamp(3rem,8vw,5rem);
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --zindex-menu:1000;
+  --zindex-fixed:1010;
+  --width-container:98rem;
+  --height-header:10rem;
+  --height-header--scroll:8rem;
+  --transition: all 0.36s cubic-bezier(0.645,0.045,0.355,1);
+  --box-shadow: 0 6px 20px rgba(2,6,10,0.6);
+}
+
   
   /* CSS Reset
   --------------------------------------------------------------*/
@@ -438,33 +429,21 @@
   /* Services
   --------------------------------------------------------------*/
   .service__card {
-    background-color: var(--color-bg-secondary);
-    box-shadow: var(--box-shadow);
-    padding: 5rem 3.5rem;
-    width: 100%;
-    max-width: 30rem;
-    justify-self: center;
-    transition: var(--transition);
-  }
-  
-  .service__card:hover {
-    background-color: var(--color-primary);
-  }
-  
-  .service__card:hover .service__link {
-    color: var(--color-white);
-  }
-  
-  .service__icon {
-    font-size: 3.5rem;
-    color: var(--color-white);
-    margin-bottom: 1.5rem;
-  }
-  
-  .service__title {
-    font-size: var(--fs-lg);
-    margin-bottom: 3rem;
-  }
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.12));
+  box-shadow: 0 12px 36px rgba(2,8,14,0.6);
+  padding: 3rem;
+  width: 100%;
+  max-width: 34rem;
+  border-radius: 12px;
+  justify-self: center;
+  transition: var(--transition);
+  color: var(--color-white);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+.service__card h3, .service__card p { color: var(--color-white); }
+.service__card:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 18px 44px rgba(2,8,14,0.7); }
+.service__icon { color: var(--color-primary); }
+
   
   /* Projects
   --------------------------------------------------------------*/
@@ -745,3 +724,4 @@
       grid-template-columns: repeat(3, 1fr);
     }
   }
+
