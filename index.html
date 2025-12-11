@@ -1,86 +1,328 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Your Name — Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <meta name="description" content="Portfolio of Your Name — software developer, student, etc.">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="title" content="Shaksham Pathak - Software Developer Portfolio" />
+  <meta name="description"
+    content="Shaksham Pathak — 3rd year BTech student, Oracle Certified Java SE 17 Developer. Building backend services, REST APIs and full-stack apps." />
+  <meta name="keywords" content="Shaksham Pathak, Java Developer, BTech, Portfolio, Spring Boot, REST APIs, PlantZen" />
+  <meta name="author" content="Shaksham Pathak" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
+  <title>Shaksham Pathak — Portfolio</title>
+
+  <!-- main css (keep your existing main.css) -->
+  <link rel="stylesheet" href="main.css" />
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- remixicon + swiper + fontawesome (kept as original) -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
 </head>
+
 <body>
-  <header class="site-header">
+  <!-- Header -->
+  <header id="header" class="header">
     <div class="container">
-      <h1 class="logo">Your Name</h1>
       <nav class="nav">
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <a href="/" class="nav__brand">
+          <i class="ri-code-s-slash-line"></i>Shaksham<span>Pathak</span>
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#hero" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#qualification" class="nav__link">Qualification</a></li>
+            <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+            <li class="nav__item"><a href="#project" class="nav__link">Projects</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="nav__toggle">
+          <i id="nav-toggle" class="ri-menu-3-line"></i>
+        </div>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero container" id="home">
-      <div>
-        <h2>Hi — I’m <strong>Your Name</strong></h2>
-        <p class="lead">BTech student • Passionate about clean code, algorithms, and building useful tools.</p>
-        <p>
-          <a class="btn" href="#projects">See projects</a>
-          <a class="muted" href="https://github.com/yourusername" target="_blank">GitHub</a>
-        </p>
+  <!-- Main -->
+  <main class="main">
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="d-grid hero__wrapper">
+          <div class="hero__content">
+            <h1 class="hero__title">Hi, I am <strong>Shaksham Pathak</strong></h1>
+
+            <!-- Typewriter shows roles pulled from resume -->
+            <h2 id="typewriter"
+                style="font-size:25px; font-weight:600; color:#1e90ff; border-right:2px solid #1e90ff; white-space:nowrap; overflow:hidden; display:inline-block;">
+            </h2>
+
+            <p style="margin-top:15px;" class="hero__description">
+              Aspiring Java Developer and a 3rd year B.Tech (Computer Science) student at Vellore Institute of Technology (AP).
+              Oracle Certified Professional: Java SE 17 Developer. I build reliable backend systems, REST APIs and full-stack applications.
+            </p>
+
+            <a href="mailto:shakshampathak18@gmail.com" class="btn--primary"
+               style="padding:1.2rem 3rem;margin-bottom:10px;display:inline-block;">Contact / Hire Me</a>
+
+            <div class="hero__info" style="margin-top:18px;">
+              <div class="hero__info-wrapper">
+                <p class="hero__info-number">3+</p>
+                <h2 class="hero__info-title">Projects<br>Selected</h2>
+              </div>
+              <div style="margin-top:10px; color:#aebcc8;">
+                <strong>Email:</strong> shakshampathak18@gmail.com &nbsp; • &nbsp;
+                <strong>Phone:</strong> +91 8100249797
+              </div>
+            </div>
+
+            <div style="margin-top:16px;">
+              <a href="assets/resume.pdf" download class="btn--primary" style="padding:1rem 2rem;">Download Resume</a>
+              <a href="https://github.com/shakshampathak18" target="_blank" class="btn"
+                 style="margin-left:10px;padding:1rem 2rem;">GitHub</a>
+            </div>
+          </div>
+
+          <!-- profile image (place optimized image at assets/profile.jpg) -->
+          <img src="assets/profile.jpg" alt="Shaksham" class="hero__img" style="max-width:420px; border-radius:14px;">
+        </div>
       </div>
-      <img class="profile" src="assets/profile.jpg" alt="Your Name profile">
     </section>
 
-    <section class="about container" id="about">
-      <h3>About</h3>
-      <p>Two to three lines about who you are, what you’re studying, what problems you love solving, and what you're looking for (internships, collaborators, etc.).</p>
-    </section>
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">About Me</h2>
+          <span class="section__subtitle">Who am I</span>
+        </div>
 
-    <section class="projects container" id="projects">
-      <h3>Selected projects</h3>
-      <div class="grid">
-        <article class="card">
-          <img src="assets/project1.png" alt="Project 1 screenshot">
-          <h4>Project One</h4>
-          <p>Short — what it does, stack used (e.g., Java, React), and link.</p>
-          <p><a href="https://github.com/yourusername/project-one" target="_blank">Code</a> · <a href="#" target="_blank">Live</a></p>
-        </article>
+        <div class="d-grid about__wrapper">
+          <div class="about__content">
+            <h3 class="about__title">Aspiring Java Developer with backend & full-stack experience.</h3>
+            <p class="about__description">
+              I am a 3rd year B.Tech (CSE) student at VIT (AP). Certified Oracle Java SE 17 Developer with experience building
+              projects using Java, Spring Boot, MySQL and REST APIs. I enjoy solving algorithmic challenges, contributing to open
+              source and building practical applications such as Library Management System, Task Management Web App and PlantZen.
+            </p>
 
-        <article class="card">
-          <h4>Project Two</h4>
-          <p>Short description + stack.</p>
-          <p><a href="#">Code</a></p>
-        </article>
+            <a href="#project" class="btn btn--primary">See projects</a>
+          </div>
 
-        <article class="card">
-          <h4>Project Three</h4>
-          <p>Short description + stack.</p>
-          <p><a href="#">Code</a></p>
-        </article>
+          <div class="skills">
+            <h3 class="skills__title">Technologies I use</h3>
+            <div class="skills__wrapper">
+              <div class="skills__content">
+                <h4 class="skills__subtitle">Backend & Databases</h4>
+                <ul class="skills__list">
+                  <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>Java (SE 17, OOP, JDBC)</li>
+                  <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>Spring Boot & REST APIs</li>
+                  <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>MySQL</li>
+                  <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>MongoDB</li>
+                </ul>
+              </div>
+
+              <div class="skills__content">
+                <h4 class="skills__subtitle">Frontend & Tools</h4>
+                <ul class="skills__list">
+                  <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>HTML, CSS, JavaScript</li>
+                  <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>React, Node.js</li>
+                  <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>Git, Linux, VS Code, IntelliJ IDEA</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="skills container" id="skills">
-      <h3>Skills</h3>
-      <p>Java • JavaScript • HTML/CSS • SQL • Data Structures • Git</p>
+    <!-- QUALIFICATION -->
+    <section id="qualification" class="section qualification">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Qualification</h2>
+          <span class="section__subtitle">Experience & Education</span>
+        </div>
+
+        <div class="qualification__wrapper">
+          <h3 class="qualification__name"><i class="ri-briefcase-fill"></i> Professional Experience</h3>
+          <div class="d-grid qualification__content">
+            <div class="qualification__item">
+              <h3 class="qualification__title">Campus Coding Club — Member</h3>
+              <p class="qualification__description">Contributed to team projects, coding sessions and workshops; participated in hackathons and open-source work.</p>
+              <span class="qualification__date">Ongoing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="qualification__wrapper">
+          <h3 class="qualification__name"><i class="ri-booklet-fill"></i> Education</h3>
+          <div class="d-grid qualification__content">
+            <div class="qualification__item">
+              <h3 class="qualification__title">B.Tech — Computer Science & Engineering</h3>
+              <h4 class="qualification__title">Vellore Institute Of Technology (AP), Amravati</h4>
+              <p class="qualification__description">Currently 3rd year — expected graduation 2027.</p>
+              <span class="qualification__date">2024 — 2027 (Expected)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="qualification__footer">
+          <p class="qualification__footer-text">Download my resume for full details</p>
+          <a href="assets/resume.pdf" download class="btn btn--primary">Resume</a>
+        </div>
+      </div>
     </section>
 
-    <section class="contact container" id="contact">
-      <h3>Contact</h3>
-      <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-      <p>LinkedIn · GitHub · Twitter (links)</p>
+    <!-- SERVICES (kept minimal) -->
+    <section id="services" class="section services">
+      <div class="container">
+        <h2 style="text-align:center;color:#fff;margin-bottom:24px;">Services</h2>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;">
+          <div style="background:#0f1315;padding:20px;border-radius:10px;">
+            <h3>Backend Development</h3>
+            <p style="color:#9fb0c8;">APIs, Spring Boot, JDBC, MySQL</p>
+          </div>
+          <div style="background:#0f1315;padding:20px;border-radius:10px;">
+            <h3>Full-Stack Apps</h3>
+            <p style="color:#9fb0c8;">React frontends with Node / Java backends</p>
+          </div>
+          <div style="background:#0f1315;padding:20px;border-radius:10px;">
+            <h3>Consulting / Internships</h3>
+            <p style="color:#9fb0c8;">Available for internships and collaborative projects</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="project" class="section project">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Projects</h2>
+          <span class="section__subtitle">Selected work</span>
+        </div>
+
+        <div class="d-grid project__wrapper">
+          <div class="project__content">
+            <img src="assets/img/project1.png" alt="Library Management" class="project__img" style="max-height:160px;object-fit:cover;">
+            <h3 class="project__title">Library Management System</h3>
+            <p class="project__description">Console & JDBC-based Java system for managing books, users and transactions (MySQL backend).</p>
+            <a href="#" class="project__link">View project</a>
+          </div>
+
+          <div class="project__content">
+            <img src="assets/img/project2.png" alt="Task Management" class="project__img" style="max-height:160px;object-fit:cover;">
+            <h3 class="project__title">Task Management Web App</h3>
+            <p class="project__description">REST APIs in Java with authentication and DB integration for task CRUD operations.</p>
+            <a href="#" class="project__link">View project</a>
+          </div>
+
+          <div class="project__content">
+            <img src="assets/img/project3.png" alt="PlantZen" class="project__img" style="max-height:160px;object-fit:cover;">
+            <h3 class="project__title">PlantZen — AI-Powered Gardening Assistant</h3>
+            <p class="project__description">React + Node.js + MongoDB application that provides personalized, region-specific plant care (OpenAI-powered guidance).</p>
+            <a href="#" class="project__link">View project</a>
+          </div>
+        </div>
+
+        <div style="display:flex;justify-content:center;margin-top:18px;">
+          <a href="https://github.com/shakshampathak18?tab=repositories" class="btn--primary" style="padding:1rem 2rem;">View more on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="d-grid contact__wrapper">
+          <div class="contact__content">
+            <h2 class="contact__title">Interested in working together? Let's talk</h2>
+            <p class="contact__description">I am open to internships and collaboration. Email me or check my GitHub profile to see my work and contributions.</p>
+            <p style="margin-top:12px;color:#9fb0c8;"><strong>Email:</strong> <a href="mailto:shakshampathak18@gmail.com">shakshampathak18@gmail.com</a><br>
+              <strong>Phone:</strong> +91 8100249797<br>
+              <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/shaksham-pathak-97b466355" target="_blank">linkedin.com/in/shaksham-pathak-97b466355</a>
+            </p>
+          </div>
+
+          <div class="contact__btn">
+            <a href="https://www.linkedin.com/in/shaksham-pathak-97b466355" class="btn btn--secondary" target="_blank">Get in touch</a>
+          </div>
+        </div>
+
+        <!-- Embedded contact form (keep or replace) -->
+        <div style="margin-top:18px;">
+          <!-- If you prefer mailto form, replace the iframe with a form or Formspree config -->
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScEgPBHT_SO-kOkbiZ_-qinQ5Oxl3ByqMWKsocY7SscN0eK8w/viewform?embedded=true"
+                  width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Your Name · <a href="README.md">Resume & Projects</a></p>
+  <!-- Footer -->
+  <footer id="footer" class="footer">
+    <div class="container" style="text-align:center;">
+      <div style="margin-bottom:10px;">
+        <a href="mailto:shakshampathak18@gmail.com" style="margin-right:8px;">✉️ Email</a>
+        <a href="https://github.com/shakshampathak18" target="_blank" style="margin-right:8px;">🐙 GitHub</a>
+        <a href="https://linkedin.com/in/shaksham-pathak-97b466355" target="_blank">🔗 LinkedIn</a>
+      </div>
+      <p class="footer__copyright">© <span id="year"></span> Shaksham Pathak. All rights reserved.</p>
     </div>
   </footer>
 
+  <!-- SwiperJS, ScrollReveal, Main JS (keep your JS file) -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Typewriter script (roles from your resume) -->
   <script>
+    const typewriterTexts = [
+      "Oracle Certified Java SE 17 Developer",
+      "Backend Developer (Java & Spring Boot)",
+      "Full-Stack Developer",
+      "Open Source Contributor"
+    ];
+
+    let currentTextIndex = 0;
+    let charIndex = 0;
+
+    const typewriterElement = document.getElementById("typewriter");
+
+    function typeEffect() {
+      const currentText = typewriterTexts[currentTextIndex];
+      typewriterElement.textContent = currentText.slice(0, charIndex);
+      charIndex++;
+      if (charIndex > currentText.length) {
+        setTimeout(() => {
+          charIndex = 0;
+          currentTextIndex = (currentTextIndex + 1) % typewriterTexts.length;
+        }, 1600);
+      }
+      setTimeout(typeEffect, 75);
+    }
+
+    typeEffect();
+
+    // set year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
+
 </html>
