@@ -1,12 +1,12 @@
 :root{
   /* Colors */
-  --color-bg-primary: #1b1f27;    /* charcoal */
-  --color-bg-secondary: #242933;
-  --color-bg-footer: #161a22;
-  --color-primary: #41e0b6;       /* soft mint */
-  --color-primary-dark: #31c79d;
-  --color-text: #e6ecf2;
-  --color-subtext: #a6b3c2;
+ --color-bg-primary: #150b24;
+  --color-bg-secondary: #1f1432;
+  --color-bg-footer: #12091f;
+  --color-primary: #7f5af0;    /* lavender neon */
+  --color-primary-dark: #6b4ad6;
+  --color-text: #e3ddff;
+  --color-subtext: #b5aee6;
 
   /* Fonts & typography (keep yours) */
   --ff-body: "Space Grotesk", sans-serif;
@@ -722,5 +722,6 @@
       grid-template-columns: repeat(3, 1fr);
     }
   }
+
 
 
