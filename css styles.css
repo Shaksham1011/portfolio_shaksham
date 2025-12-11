@@ -1,14 +1,12 @@
 :root{
   /* Colors */
-  --color-primary: #20c0a2;         /* teal accent */
-  --color-primary-dark: #18a886;
-  --color-bg-primary: #0f1720;      /* slightly lighter than pure black */
-  --color-bg-secondary: #141a20;    /* cards background */
-  --color-bg-footer: #0b0f13;
-  --color-white: #ffffff;
-  --color-text: #c9d6df;            /* much higher contrast text */
-  --color-subtext: #9fb0bb;         /* secondary text */
-  --color-border: #1f262b;
+  --color-bg-primary: #1b1f27;    /* charcoal */
+  --color-bg-secondary: #242933;
+  --color-bg-footer: #161a22;
+  --color-primary: #41e0b6;       /* soft mint */
+  --color-primary-dark: #31c79d;
+  --color-text: #e6ecf2;
+  --color-subtext: #a6b3c2;
 
   /* Fonts & typography (keep yours) */
   --ff-body: "Space Grotesk", sans-serif;
@@ -724,4 +722,5 @@
       grid-template-columns: repeat(3, 1fr);
     }
   }
+
 
